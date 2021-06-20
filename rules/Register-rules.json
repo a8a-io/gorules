@@ -1,0 +1,15 @@
+{
+    "event": "Register",
+    "application": "MaxValue",
+    "rules": [
+        {
+            "id":"NewUser",
+            "conditions": [
+                "auth.registered = true"
+            ],
+            "start_date": "2021-06-05 12:00",
+            "end_date": "2022-06-06 12:00",
+            "reward": 100
+        }
+    ]
+}
