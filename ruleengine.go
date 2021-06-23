@@ -28,8 +28,8 @@ type _RuleEngine struct {
 	RewardQ         *dbqueue.DBQueue
 }
 
-func NewRuleEngine(rulesFolderPath string) RuleEngine {
-	return _RuleEngine{rulesFolderPath: rulesFolderPath}
+func NewRuleEngine(rulesFolderPath string, EventQ *dbqueue.DBQueue, RewardQ *dbqueue.DBQueue) RuleEngine {
+	return _RuleEngine{rulesFolderPath: rulesFolderPath, EventQ: EventQ, RewardQ: RewardQ}
 }
 
 func (this _RuleEngine) setRules(rulesMap map[string]RulesList) {
